@@ -62,7 +62,7 @@ function dbread_load_breadcrumbs() {
 			}
 		}
 
-		if ( '' == $screen->taxonomy && '' == $screen->post_type && basename( $_SERVER['PHP_SELF'] ) != $screen->parent_file ) {
+		if ( '' == $screen->taxonomy && '' == $screen->post_type && basename( $_SERVER['PHP_SELF'] ) != $screen->parent_file && '' != $screen->parent_base ) {
 			$breadcrumbs[] = '<a href="' . dbread_make_parent( $screen->parent_file ) . '">' . dbread_make_words( $screen->parent_base ) . '</a>';
 		}
 
